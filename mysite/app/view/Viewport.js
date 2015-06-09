@@ -3,7 +3,9 @@ Ext.define('App.view.Viewport', {
     extend: 'Ext.container.Viewport',
     requires:[
         'Ext.tab.Panel',
-        'Ext.layout.container.Border'
+        'Ext.layout.container.Border',
+        'App.view.UserGrid',
+        'App.view.PermissionGrid'
     ],
 
     layout: {
@@ -18,8 +20,19 @@ Ext.define('App.view.Viewport', {
     },{
         region: 'center',
         xtype: 'tabpanel',
-        items:[{
-            title: 'Center Tab 1'
-        }]
+        items:[
+            {
+                title: 'Usuarios',
+                items : {
+                    xtype : 'usergrid'
+                }
+            },
+            {
+                title : 'Permisos',
+                items : {
+                    xtype : 'permissiongrid'
+                }
+            }
+        ]
     }]
 });
