@@ -1,12 +1,14 @@
 from django.db import models
 
 # Create your models here.
+
+
 class User(models.Model):
 
     id = models.AutoField(primary_key=True, db_column='usrId')
     name = models.CharField(max_length=50, db_column='usrName')
     last_name = models.CharField(max_length=50, db_column='usrLastName')
-    ogin = models.CharField(max_length=50, db_column='usrLogin', unique=True)
+    login = models.CharField(max_length=50, db_column='usrLogin', unique=True)
     password = models.CharField(max_length=50, db_column='usrPass')
     mail = models.CharField(max_length=50, db_column='usrMail')
     tel = models.CharField(max_length=50, db_column='usrTel')
