@@ -10,8 +10,13 @@
     will need to resolve manually.
 */
 
+Ext.Loader.setConfig({
+    enabled : true, 
+});
+
 Ext.application({
     name: 'App',
+    appFolder : 'app',
 
     views: [
         'Viewport'
@@ -23,6 +28,9 @@ Ext.application({
 
     stores: [
         // TODO: add stores here
+        'App.store.Users',
+        'App.store.Permissions',
+        'App.store.UserPermissions'
     ],
 
     autoCreateViewport: true
