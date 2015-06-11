@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Backbone js example</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="underscore.js"></script>
+    <script type="text/javascript" src="backbone.js"></script>
+    <script type="text/javascript" src="app/models.js"></script>
+    <script type="text/javascript" src="app/collections.js"></script>
+    <script type="text/javascript" src="app/views.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header row">
+            <div class="page-header">
+              <h1>Ejemplo Backbone.js <small>Example Backbone.js</small></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">Menu</h3>
+                    </div>
+                    <div class="panel-body">
+                        conten menu
+                    </div>
+                </div>
+            </div>
+            <div class="content col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">Content</h3>
+                    </div>
+                    <div class="panel-body" id="content-pane">
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <script type="text/template" id="useritem">
+        <tr>
+            <td><%= id %></td>
+            <td><%= name %></td>
+            <td><%= last_name %></td>
+            <td><%= login %></td>
+            <td><%= password %></td>
+            <td><%= mail %></td>
+            <td><%= status %></td>
+            <td><%= date_log %></td>
+        </tr>
+    </script>
+    <script type="text/template" id="usercollection">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>LAST NAME</th>
+                    <th>LOGIN</th>
+                    <th>PASSWORD</th>
+                    <th>MAIL</th>
+                    <th>STATUS</th>
+                    <th>DATE LOG</th>
+                </tr>
+            </thead>
+            <tbody id="usercollection-body">
+                
+            </tbody>
+        </table>
+    </script>
+</body>
+</html>

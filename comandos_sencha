@@ -1,0 +1,5 @@
+sencha-4.0.5.87 generate model User id:int,name:string,last_name:string,login:string,password:string,mail:string,tel:string,status:boolean,date_log:string
+
+sencha-4.0.5.87 generate model Permission id:int,name:string,status:boolean
+
+sencha-4.0.5.87 generate model UserPermissions id:int,date_log:string,assigned_by:int,user_id:int,permission_id:int

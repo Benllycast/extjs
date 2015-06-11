@@ -6,6 +6,12 @@ Ext.define('App.view.UserGrid', {
     layout : 'fit',
     height : 300,
     padding : 10,
+    selType : 'rowmodel',
+    plugins: [
+        Ext.create('Ext.grid.plugin.RowEditing', {
+            clicksToEdit: 2
+        })
+    ],
     columns : [
         {
             text : 'Id',
@@ -13,27 +19,53 @@ Ext.define('App.view.UserGrid', {
         },
         {
             text : 'Nombre',
-            dataIndex : 'name'
+            dataIndex : 'name',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
             text : 'Apellido',
-            dataIndex : 'last_name'
+            dataIndex : 'last_name',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
             text : 'Login',
-            dataIndex : 'login'
+            dataIndex : 'login',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
             text : 'E-mail',
-            dataIndex : 'mail'
+            dataIndex : 'mail',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
             text : 'Telefono',
-            dataIndex : 'tel'
+            dataIndex : 'tel',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
             text : 'Estado',
-            dataIndex : 'status'
+            dataIndex : 'status',
+            xtype : 'booleancolumn',
+            trueText : 'SI',
+            falseText : 'NO',
+            editor : {
+                xtype : 'checkboxfield'
+            }
         }
     ]
 })

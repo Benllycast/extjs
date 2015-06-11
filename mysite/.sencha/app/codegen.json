@@ -32,6 +32,9 @@
     },
     "app.js.tpl.merge": {
       "f99fcd4b73ed427a107b320ff7aa6a7008fa3faa": "eJxVks1O6zAQhfd5iqNuCqhK973LwoLFvSxASAjdhRtPEwvHjvxDqBDvznhCSJtNHM/MmTPfZHtTgZ+nzkQcjSXwuyVHQSXSUE4jD1rOhxMeyTWdwr7XNV58RqMcSJuE9Fuuoug5Is01Rx9w8jlADYM1jUrGuw0OuVRQJCmOGI216NQ7IXkcCD2FVhqK1NIUY0cO3G6gwMp9ROM1zXZZGknFt4iYm46N/AZcy35GEeu5wMYNF7oUvLUUItjju6ExyrTSImTnStUqTr3ZPWNog9K0qisRutekrD2Bw66lWJwvEEafrS6TWNObmWPvY+JIeFvC2jsSNePgmUjAYFXDalfzCPvF53WN++M5DabvfJpoCWWRmg2VlgXusswCa1PwCe8heJ0bXhhWkwIjOfKO0ooHUakIip4kl3WWEQNFb3lPvXK5jF9XN9uquvtI9dmCrz6nX0D1tMP6kyP/+Pi13kzkhPUOr/JRnvUz3ww+pLVc/f/JO1vRRfZfZdxlZkyejZ0nbbd4erh92EFp/RMG46WLMpWT3wdiNrOBHVLIVH1d/6m+AZp4/0M\u003d"
+    },
+    "{modelFileName}.js.tpl.merge": {
+      "31d5356142a167c72422f7902f19df3c583f3249": "eJxlUcFugzAMvfMVVqUq0CLorlC6w7TrfgBxSMG00dKAktAxRfn3GWg7rfMhdvKeX16c99EmDbZCYcjcpWtQfvALmp7X6BOnqPYsBhcABY4WVZMBc0du8E1yYwicoXlpBcrGZFC69byf4srlgCZZICggbAdVW9Epquaz6CZ+j7bTEF65Bo2W+GUVQ8+1nXqXhsT0UtiQxSyKQdDxLqe0X1iJRHWy5xy2W/GsvNjR0FLPTC5FdRfLWJT/I5ODpB/MOXQwDSKDttyRHfvdz/VLBf6pywfBk8Cg1ZTyX8BH4Z+h3CTWfm97OT2/WC3A6vDouRtgjx9ZTDA3Zc/AuxLCUagGRygKGOtuUDaCV2AMiBYzqPw+pQsOgVtDuoGj5OoTJP072I4cNkONcEF9Qqg71UpR08i/0sGgBmwEbTYpeZwdVcH07h/XJaFF"
     }
   },
   "targets": {
@@ -295,6 +298,42 @@
         "controllerNamespace": "App.controller",
         "library": "all",
         "appStores": ""
+      }
+    },
+    "app/model/User.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "App",
+        "modelNamespace": "App.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "User",
+        "name": "User",
+        "fields": "id:int:null,name:string:null,last_name:string:null,login:string:null,password:string:null,mail:string:null,tel:string:null,status:boolean:null,date_log:string:null"
+      }
+    },
+    "app/model/Permission.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "App",
+        "modelNamespace": "App.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "Permission",
+        "name": "Permission",
+        "fields": "id:int:null,name:string:null,status:boolean:null"
+      }
+    },
+    "app/model/UserPermissions.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "App",
+        "modelNamespace": "App.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "UserPermissions",
+        "name": "UserPermissions",
+        "fields": "id:int:null,date_log:string:null,assigned_by:int:null,user_id:int:null,permission_id:int:null"
       }
     }
   }

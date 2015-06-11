@@ -6,6 +6,12 @@ Ext.define('App.view.PermissionGrid',{
     layout : 'fit',
     height : 300,
     padding : 10,
+    selType : 'rowmodel',
+    plugins: [
+        Ext.create('Ext.grid.plugin.RowEditing', {
+            clicksToEdit: 2
+        })
+    ],
     columns : [
         {
             text : 'Id',
@@ -13,12 +19,23 @@ Ext.define('App.view.PermissionGrid',{
         },
         {
             text : 'Nombre',
-            dataIndex : 'name'
+            dataIndex : 'name',
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
         },
         {
-            text : 'Estado',
-            dataIndex : 'status'
+            text : 'Activo',
+            dataIndex : 'status',
+            xtype : 'booleancolumn',
+            trueText : 'SI',
+            falseText : 'NO',
+            editor : {
+                xtype : 'checkboxfield'
+            }
         }
-    ]
+    ],
+
 
 });

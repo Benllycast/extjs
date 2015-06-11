@@ -1,0 +1,7 @@
+mas documentado
+mas ejemplos
+tiene tiempo
+maneja MVC completamente
+todas las partes pricipales de la aplicacion estan separadas
+soporta api rest sin otras librerias
+

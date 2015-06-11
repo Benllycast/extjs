@@ -1,0 +1,6 @@
+bueno nada mas para las vistas
+todo js que vaya a cargar algo, debe estar antes del JSTransformer
+mala convinacion entre JS y XHTML
+buena granularidad de componentes
+necesita otra libreria para mantener los datos
+
