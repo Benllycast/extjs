@@ -17,12 +17,26 @@ var data = {
 //     window.data.rows = users;
 // });
     
+function getUserData() {
+    var user = {};
+    user.id = $("input#id").val();
+    user.name = $("input#name").val();
+    user.last_name = $("input#last_name").val();
+    user.login = $("input#login").val();
+    user.password = $("input#password").val();
+    user.mail = $("input#mail").val();
+    user.tel = $("input#tel").val();
+    user.status = $("input#status").val();
+    console.log(user);
+    return user;
+};
 
+var userData = {};
 $(document).ready(function (evt) {
     // body...
     ucv = new UserCollectionView({model : usrcol, el: $('#content-pane')});
     ucv.render();
-    // uv = new UserView({model: usr, el:$('#usercollection-body')});
-    // uv.render();
+    userData = new ControlData({el: $("div#userdata")});
+    userData.delegateEvents();
 });
 

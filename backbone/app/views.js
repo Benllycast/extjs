@@ -30,3 +30,30 @@ var UserCollectionView = Backbone.View.extend({
         return this;
     }
 });
+
+var ControlData = Backbone.View.extend({
+    events : {
+        "click button#btnRead"      : "readUser",
+        "click button#btnCreate"    : "createUser",
+        "click button#btnUpdate"    : "updateUser",
+        "click button#btnDelete"    : "deleteUser" 
+    },
+
+    readUser : function () {
+        // TODO: hacer esto
+        console.log("user read");
+    },
+    createUser : function () {
+        // TODO: hacer esto
+        console.log("user create");
+    },
+    updateUser : function () {
+        // TODO: hacer esto
+        console.log("user update");
+    },
+    deleteUser : function () {
+        // TODO: hacer esto
+        console.log("user delete");
+    },
+});
+
